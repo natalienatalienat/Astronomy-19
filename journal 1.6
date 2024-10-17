@@ -11,7 +11,7 @@ sin_values = sin_function(x_values)
 cos_values = cos_function(x_values)
 table = np.column_stack((x_values, sin_values, cos_values))
 
-print(f"{'x':>10} {'sin(x)':>10} {'cos(x)':>10}")
+print(f"{'x'} {'sin(x)'} {'cos(x)'}")
 for i in range(10):
     x, sin_x, cos_x = table[i]
-    print(f"{x:>10f} {sin_x:>10f} {cos_x:>10f}")
+    print(f"{x} {sin_x} {cos_x}")
