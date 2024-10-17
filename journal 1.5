@@ -6,9 +6,9 @@ import numpy as np
 def main():
     x_values = np.linspace(0, 2 * np.pi, 1000)
     sin_values = np.sin(x_values)
-    print(f"{'x':>10} {'sin(x)':>10}")
+    print(f"{'x'} {'sin(x)'}")
     for x, sin_x in zip(x_values, sin_values):
-        print(f"{x:>10.5f} {sin_x:>10.5f}")
+        print(f"{x} {sin_x}")
         
 if __name__ == "__main__":
     main()
