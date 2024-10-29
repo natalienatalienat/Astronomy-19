@@ -1,0 +1,24 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 1, 100)
+y = np.exp(x)
+
+def nice_plot(x,y,
+              flag_save=True,
+              xlabel='Time [milliseconds]',
+              ylabel='Awesomeness',
+              lcolor='yellowgreen',
+              fs=14,
+              fname='plot.png'):
+    f, ax = plt.subplots(1,1,figsize=(4,4))
+    ax.plot(x,y,color=lcolor,linewidth=1.5)
+    ax.set_xlabel(xlabel,fontsize=fs)
+    ax.set_ylabel(ylabel,fontsize=fs)
+    if(flag_save):
+        plt.savefig(fname,bbox_inches='tight',dpi=400)
+def main():
+    nice_plot(x,y)
+    
+if __name__=="__main__":
+    main()
